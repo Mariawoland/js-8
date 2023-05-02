@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 8</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-color: #5065a5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            height: 96vh;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        #ricxvi-1,
+        #ricxvi-2 {
+            background-color: #7085c5;
+            border-color: #6075b5;
+            width: 100px;
+            height: 60px;
+            outline: none;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .nishani {
+            width: 30px;
+            height: 30px;
+            background-color: #414b9c;
+            border-color: #414b9c;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <span>აირჩიე ოპერატორი შეყვანილი რიცხვების <p>მისამატებლად, გამოსაკლებლად, გასამრავლებლად ან გასაყოფად</p></span>
+
+    <div class="fleqsi">
+
+        <input type="number" id="ricxvi-1">
+        <input type="number" id="ricxvi-2">
+
+    </div>
+
+    <div class="fleqsi">
+        <input type="button" value="+" onclick="mimateba()" class="nishani">
+        <input type="button" value="-" onclick="gamokleba()" class="nishani">
+        <input type="button" value="*" onclick="gamravleba()" class="nishani">
+        <input type="button" value="/" onclick="gayopa()" class="nishani">
+    </div>
+
+    <p id="shedegi" style="font-size: 30px;"></p>
+    <p id="shetyobineba"></p>
+
+
+    <script>
+
+        function mimateba() {
+            ricxviErti = document.getElementById("ricxvi-1").value;
+            let ricxvi_1 = parseInt(ricxviErti);
+            ricxviOri = document.getElementById("ricxvi-2").value;
+            let ricxvi_2 = parseInt(ricxviOri);
+            document.getElementById("shedegi").innerHTML = ricxvi_1 + ricxvi_2;
+            if (ricxviErti = '' || ricxviOri == '') {
+                document.getElementById("shetyobineba").innerHTML = '<span style="color: white; ">შეიყვანეთ რიცხვები</span>';
+                document.getElementById("shedegi").style.display = "none";
+            }
+        }
+
+        function gamokleba() {
+            ricxviErti = document.getElementById("ricxvi-1").value;
+            let ricxvi_1 = parseInt(ricxviErti);
+            ricxviOri = document.getElementById("ricxvi-2").value;
+            let ricxvi_2 = parseInt(ricxviOri);
+            document.getElementById("shedegi").innerHTML = ricxvi_1 - ricxvi_2;
+            if (ricxviErti = '' || ricxviOri == '') {
+                document.getElementById("shetyobineba").innerHTML = '<span style="color: white; ">შეიყვანეთ რიცხვები</span>';
+                document.getElementById("shedegi").style.display = "none";
+            }
+        }
+
+        function gamravleba() {
+            ricxviErti = document.getElementById("ricxvi-1").value;
+            let ricxvi_1 = parseInt(ricxviErti);
+            ricxviOri = document.getElementById("ricxvi-2").value;
+            let ricxvi_2 = parseInt(ricxviOri);
+            document.getElementById("shedegi").innerHTML = ricxvi_1 * ricxvi_2;
+            if (ricxviErti = '' || ricxviOri == '') {
+                document.getElementById("shetyobineba").innerHTML = '<span style="color: white; ">შეიყვანეთ რიცხვები</span>';
+                document.getElementById("shedegi").style.display = "none";
+            }
+        }
+
+        function gayopa() {
+            ricxviErti = document.getElementById("ricxvi-1").value;
+            let ricxvi_1 = parseInt(ricxviErti);
+            ricxviOri = document.getElementById("ricxvi-2").value;
+            let ricxvi_2 = parseInt(ricxviOri);
+            document.getElementById("shedegi").innerHTML = ricxvi_1 / ricxvi_2;
+            if (ricxviErti = '' || ricxviOri == '') {
+                document.getElementById("shetyobineba").innerHTML = '<span style="color: white; ">შეიყვანეთ რიცხვები</span>';
+                document.getElementById("shedegi").style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
